@@ -11,12 +11,21 @@ pipeline {
                         $class: 'Gitscm'
                         branches: [[name: '/*main']];
                         userRemoteConfigs: [[
-                            url: 'https://github.com/ultramind/nextjs-portfolio',
+                            url: 'https://github.com/ultramind/jenkins-cicd-demo',
                             credentialsId: 'jenkins-demo-creds'
                         ]]
                     })
                 }
             }
+        }
+    }
+
+    post{
+        success {
+            echo "Pipeline Succeeded..."
+        }
+        failure{
+            echo "Pipeline failed..."
         }
     }
 }
