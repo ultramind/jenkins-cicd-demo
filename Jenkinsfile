@@ -16,21 +16,21 @@ pipeline {
             }
         }
 
-        // building image stage
-        stage('Creating Docker Image'){
-            steps{
-                sh 'docker build -t akachukwuu/jenkins-cicd-demo:v1 .'
-            }
-        }
+        // // building image stage
+        // stage ("Creating Docker Image"){
+        //     steps{
+        //         sh 'docker build -t akachukwuu/jenkins-cicd-demo:v1 .'
+        //     }
+        // }
 
-        // pushing the Docker image to Docker hub
-        stage('pushing Image to DockerHub'){
-            steps{
-                withDockerRegistry([credentialsId: 'DockerHub', url:'https://index.docker.io/v1/',]){
-                    sh 'docker push akachukwuu/jenkins-cicd-demo:v1'
-                }
-            }
-        }
+        // // pushing the Docker image to Docker hub
+        // stage ("pushing Image to DockerHub"){
+        //     steps{
+        //         withDockerRegistry([credentialsId: 'DockerHub', url:'https://index.docker.io/v1/',]){
+        //             sh 'docker push akachukwuu/jenkins-cicd-demo:v1'
+        //         }
+        //     }
+        // }
     }
 
     post{
