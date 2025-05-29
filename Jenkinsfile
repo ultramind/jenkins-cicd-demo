@@ -6,7 +6,7 @@ pipeline {
         stage ("Checkout code"){
             steps {
                 checkout ([
-                    $class: 'GitSCM'
+                    $class: 'GitSCM',
                     branches: [[name: '*/main']],
                     userRemoteConfigs: [[
                         url: 'https://github.com/ultramind/jenkins-cicd-demo.git',
