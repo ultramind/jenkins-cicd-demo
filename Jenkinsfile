@@ -11,8 +11,8 @@ pipeline {
                         $class: 'Gitscm'
                         branches: [[name: '/*main']];
                         userRemoteConfigs: [[
-                            url: 'https://github.com/ultramind/jenkins-cicd-demo',
-                            credentialsId: 'jenkins-demo-creds'
+                            url: 'https://github.com/ultramind/jenkins-cicd-demo.git',
+                            credentialsId: 'Jenkin-cicd-token'
                         ]]
                     })
                 }
