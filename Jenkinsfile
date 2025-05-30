@@ -17,16 +17,16 @@ pipeline {
         }
 
         // building image stage
-        stage ("Creating Docker Image"){
+        stage ("Creating Docker Image..."){
             steps {
                 sh 'docker build -t akachukwuu/jenkins-cicd-demo:v1 .'
             }
         }
 
         // pushing the Docker image to Docker hub
-        stage ("pushing Image to DockerHub"){
+        stage ("pushing Image to Docker..."){
             steps{
-                withDockerRegistry([credentialsId: 'DockerHub', url:'https://index.docker.io/v1/',]){
+                withDockerRegistry([credentialsId: 'DockerHub', url:'',]){
                     sh 'docker push akachukwuu/jenkins-cicd-demo:v1'
                 }
             }
