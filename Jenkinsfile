@@ -16,12 +16,12 @@ pipeline {
             }
         }
 
-        // building image stage
-        stage ("Creating Docker Image"){
-            steps {
-                sh 'docker build -t akachukwuu/jenkins-cicd-demo:v1 .'
-            }
-        }
+        // // building image stage
+        // stage ("Creating Docker Image"){
+        //     steps {
+        //         sh 'docker build -t akachukwuu/jenkins-cicd-demo:v1 .'
+        //     }
+        // }
 
         // // pushing the Docker image to Docker hub
         // stage ("pushing Image to DockerHub"){
