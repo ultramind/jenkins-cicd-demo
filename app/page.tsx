@@ -69,7 +69,7 @@ export default function Home() {
           highly customizable to fit diverse project needs and workflows. It can
           integrate with various version control systems, cloud services, and
           containerization tools, enabling teams to streamline their development
-          pipelines effectively
+          pipelines effectively.
         </p>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
